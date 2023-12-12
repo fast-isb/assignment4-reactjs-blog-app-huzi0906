@@ -38,7 +38,6 @@ const Login = () => {
 
   const checkData = async (data: FieldValues) => {
     try {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const response: any = await mutation.mutateAsync(data);
       sessionStorage.setItem("token", response?.token);
       sessionStorage.setItem("userId", response?.userId);
